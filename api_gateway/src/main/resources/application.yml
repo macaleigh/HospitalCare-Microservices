@@ -1,0 +1,58 @@
+server:
+  port: 9000
+
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      server:
+        webmvc:
+          routes:
+            - id: pacientes
+              uri: lb://DB-HOSPITAL-VM
+              predicates:
+                - Path=/api/v1/pacientes/**
+            - id: medicos
+              uri: lb://MS-MEDICOS
+              predicates:
+                - Path=/api/v1/medicos/**
+            - id: especialidades
+              uri: lb://MS-ESPECIALIDADES
+              predicates:
+                - Path=/api/v1/especialidades/**
+            - id: citas
+              uri: lb://MS-CITAS
+              predicates:
+                - Path=/api/v1/citas/**
+            - id: fichas-clinicas
+              uri: lb://MS-FICHAS-CLINICAS
+              predicates:
+                - Path=/api/v1/fichas-clinicas/**
+            - id: recetas
+              uri: lb://MS-RECETAS
+              predicates:
+                - Path=/api/v1/recetas/**
+            - id: examenes
+              uri: lb://MS-EXAMENES
+              predicates:
+                - Path=/api/v1/examenes/**
+            - id: hospitalizacion
+              uri: lb://MS-HOSPITALIZACION
+              predicates:
+                - Path=/api/v1/hospitalizaciones/**
+            - id: urgencias
+              uri: lb://MS-URGENCIAS
+              predicates:
+                - Path=/api/v1/urgencias/**
+            - id: pagos
+              uri: lb://MS-PAGOS
+              predicates:
+                - Path=/api/v1/pagos/**
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
