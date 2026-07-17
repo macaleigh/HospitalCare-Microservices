@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="eureka_server" />
+        <module name="api_gateway" />
+      </profile>
+      <profile name="Annotation profile for ms-hospitalizacion" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
+        </processorPath>
+        <module name="ms-examenes" />
+        <module name="ms-recetas" />
+        <module name="ms-hospitalizacion" />
+        <module name="ms-citas" />
+        <module name="ms_medicos" />
+        <module name="ms-especialidades" />
+        <module name="db_hospital_vm" />
+        <module name="ms-urgencias" />
+        <module name="ms-pagos" />
+        <module name="ms-fichas-clinicas" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="api_gateway" options="-parameters" />
+      <module name="db_hospital_vm" options="-parameters" />
+      <module name="eureka_server" options="-parameters" />
+      <module name="ms-citas" options="-parameters" />
+      <module name="ms-especialidades" options="-parameters" />
+      <module name="ms-examenes" options="-parameters" />
+      <module name="ms-fichas-clinicas" options="-parameters" />
+      <module name="ms-hospitalizacion" options="-parameters" />
+      <module name="ms-pagos" options="-parameters" />
+      <module name="ms-recetas" options="-parameters" />
+      <module name="ms-urgencias" options="-parameters" />
+      <module name="ms_medicos" options="-parameters" />
+    </option>
+  </component>
+</project>
