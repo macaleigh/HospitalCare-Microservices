@@ -104,9 +104,9 @@ CREATE DATABASE IF NOT EXISTS ms_pagos;
 ```
 
 2. Levantar los servicios en este orden:
-    1. `eureka-server` (esperar que cargue el dashboard en `http://localhost:8761`)
-    2. Los 10 microservicios (en cualquier orden)
-    3. `api-gateway`
+   1. `eureka-server` (esperar que cargue el dashboard en `http://localhost:8761`)
+   2. Los 10 microservicios (en cualquier orden)
+   3. `api-gateway`
 
 3. Verificar que todos los servicios aparezcan registrados en `http://localhost:8761`
 
