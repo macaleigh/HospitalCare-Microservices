@@ -89,6 +89,7 @@ Cada test utiliza `@Mock` para simular el repositorio y `@InjectMocks` para inye
 ### Pasos
 
 1. Crear las bases de datos necesarias en MySQL:
+
 ```sql
 CREATE DATABASE IF NOT EXISTS db_hospital_vm;
 CREATE DATABASE IF NOT EXISTS ms_medicos;
@@ -110,3 +111,5 @@ CREATE DATABASE IF NOT EXISTS ms_pagos;
 3. Verificar que todos los servicios aparezcan registrados en `http://localhost:8761`
 
 4. Probar el sistema a través del Gateway, por ejemplo:
+
+GET http://localhost:9000/api/v1/pacientes
